@@ -160,11 +160,17 @@ Certifique-se de que os seguintes arquivos estão presentes:
 
 ```
 sql_script_automator/
-├── sql_script_automator.py    # Script principal
-├── unidades_de_saude.json     # Arquivo de exemplo (opcional)
-├── README.md                  # Este arquivo
-└── __pycache__/              # Cache do Python (gerado automaticamente)
+├── sql_script_automator.py           # Script principal
+├── exemplo_unidades_saude.json       # Arquivo de exemplo (3 registros)
+├── README.md                         # Este arquivo
+├── .gitignore                        # Configuração Git
+└── __pycache__/                      # Cache do Python (gerado automaticamente)
 ```
+
+**📁 Arquivos de dados:**
+
+- `exemplo_unidades_saude.json` - Arquivo pequeno com 3 registros para testes
+- `unidades_de_saude.json` - Arquivo grande (15MB, 328k registros) - não incluído no Git por ser muito grande
 
 ### 6. Teste Rápido (Opcional)
 
@@ -173,6 +179,10 @@ Para verificar se tudo está funcionando:
 ```bash
 # Teste o script com dados de exemplo
 python sql_script_automator.py --exemplo
+
+# OU teste com o arquivo de exemplo incluído
+python sql_script_automator.py
+# Quando solicitar o arquivo, digite: exemplo_unidades_saude.json
 ```
 
 **Se você ver uma barra de progresso e SQL sendo gerado, está tudo pronto! 🎉**
